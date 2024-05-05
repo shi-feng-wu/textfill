@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="box">
+        <h1>Missing Text Fill Tool</h1>
+        <h2>Input a passage with missing text to have a masked language model automatically fill in the gaps!</h2>
+        <form action="/process" method="post">
+            <textarea name="input_text" id="input_text" rows="4" cols="50" required>{{ output_text }}</textarea>
+            <button id="submit" type="submit">Generate Text</button>
+            <button type="button" onclick="restoreText()">Restore Original</button>
+            <button type="button" onclick="clearText()">Clear Input</button>
+        </form>
+    </div>
+
+    <script>
+        // Initialize with the Flask variable, defaulting to an empty string if undefined
+        var originalText = "{{ input_text|safe }}" || '';
+
+        function clearText() {
+            document.getElementById("input_text").value = '';
+        }
+
+        function restoreText() {
+            document.getElementById("input_text").value = originalText;
+        }
+    </script>
+</body>
+</html>
