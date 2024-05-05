@@ -6,7 +6,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/process', methods=['POST'])
+@app.route('/', methods=['POST'])
 def process():
     input_text = request.form['input_text']
     output_text = f"Processed: {input_text}"
