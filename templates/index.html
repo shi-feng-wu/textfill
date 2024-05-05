@@ -10,10 +10,13 @@
         <h1>Missing Text Fill Tool</h1>
         <h2>Input a passage with missing text to have a masked language model fill in the gaps.</h2>
         <form action="/process" method="post">
-            <textarea name="input_text" id="input_text" rows="4" cols="50" required placeholder="Enter text here...">{{ output_text }}</textarea>
+            <div class="text-wrap">
+                <textarea name="input_text" id="input_text" rows="4" cols="50" required placeholder="Enter text here...">{{ output_text }}</textarea>
+            </div>
             <button id="submit" type="submit">Generate Text</button>
             <button type="button" onclick="restoreText()">Restore Original</button>
             <button type="button" onclick="clearText()">Clear Input</button>
+            
         </form>
     </div>
 

@@ -26,9 +26,8 @@ button {
   cursor: pointer;
   text-align: right;  
   width: 40%;
-  margin: 20px -10px auto auto;
+  margin: 20px 0px auto auto;
   line-height: 0px;
-  border-radius: 50px;
   padding-right: 20px;
 }
 
@@ -37,19 +36,26 @@ button:hover {
 }
 
 textarea {
-  font-size: 1em;
+  box-sizing: border-box;
+  font-size: .8em;
   border: 2px solid white;
   width: 100%;
-  height: 400px;
-  margin-bottom: 20px;
+  height: 100%;
   font-family: "Roboto Mono", Times, serif;
   padding: 1%;
+}
+
+.text-wrap {
+  height: 23em;
+  width: 100%;
+  margin-bottom: 1em;
 }
 
 h1 {
   font-weight: 800;
   font-size: 6em;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 2%;
   text-decoration: none !important;
   line-height: 110%;
 }
@@ -64,6 +70,7 @@ h2 {
 .box {
   text-align: center;
   width: 90%;
+  padding: 4em 0;
   max-width: 900px;
   margin: 0 auto;
   display: flex;
@@ -74,5 +81,5 @@ h2 {
 form {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 100%;
 }
