@@ -1,0 +1,2 @@
+1. data_collection.py will clean the raw text files and put them in the clean_text folder
+2. preprocess.py will tokenize and save all the text files
