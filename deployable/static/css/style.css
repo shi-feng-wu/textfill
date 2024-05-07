@@ -66,11 +66,23 @@ h2 {
   margin-top: 0px;
 }
 
+.instructions {
+  margin-bottom: 1em;
+  padding: 1%;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+}
+
+.instructions * {
+  color: black;
+}
+
 
 .box {
   text-align: center;
   width: 90%;
-  padding: 4em 0;
+  padding: 2.5em 0;
   max-width: 900px;
   margin: 0 auto;
   display: flex;

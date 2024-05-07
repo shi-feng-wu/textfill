@@ -38,7 +38,7 @@ def index():
 def process():
     input_text = request.form['input_text']
     filled_text = fill_mask(input_text)
-    output_text = f"Processed: {filled_text}"
+    output_text = filled_text
     return render_template('index.html', input_text=input_text, output_text=output_text)
 
 if __name__ == '__main__':
